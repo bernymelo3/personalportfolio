@@ -9,7 +9,7 @@ import TabButton from "./TabButton";
 // Define types for your skill items and categories
 type SkillItem = {
   name: string;
-  rating: number;
+  rating?: number;
   icon: string;
 };
 
@@ -48,7 +48,8 @@ const Skills = () => {
 
 
   const renderProgressBar = (rating: number | undefined) => {
-    const percentage = `${rating * 20}%`; // Assuming rating is from 1 to 5
+    const safeRating = rating ?? 0; // Default to 0 if rating is undefined
+    const percentage = `${safeRating * 20}%`; // Use safeRating here
     return (
       <div className="progress-container">
         <div className="progress-bar" style={{ width: percentage }}></div>
@@ -120,11 +121,6 @@ const Skills = () => {
     ],
     // ... you can define more categories like DevOps, Cybersecurity, etc. based on the skills from your CV ...
   };
-
-  const profile: Profile = {
-
-  };
-
 
   return (
     <section id="skills" className="skills-section">
