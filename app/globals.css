@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.cursive {
+  font-family: 'Kaushan Script', cursive;
+
+}
+
+.Welcome-text {
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)),
+    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #a48fff1f;
+  display: flex;
+
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
+
+.button-primary {
+  background: linear-gradient(180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.32) 100%),
+    rgba(113, 47, 255, 0.12);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+}
+
+.button-primary:hover {
+  background: linear-gradient(180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.42) 100%),
+    rgba(113, 47, 255, 0.24);
+  box-shadow: inset 0 0 12px #bf97ff70;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  color: #FFFFFF;
+  /* Adjust as necessary */
+}
+
+.skill-name {
+  margin-right: 10px;
+  /* Add any other styles you need for the skill name */
+}
+
+.tabs_button {
+  padding: 10px;
+  margin-right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.active-tab {
+  color: #FFFFFF;
+  /* White text color for the active tab */
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+
+/* Define a class for the default tab style */
+.tab-button {
+  color: rgb(255, 255, 255);
+  /* Default text color */
+  background-color: lightgray;
+  /* Default background color */
+}
+
+/* Define a class for the active tab style */
+.tab-button.active {
+  color: white;
+  /* Text color for the active tab */
+  background-color: rgb(255, 255, 255);
+  /* Background color for the active tab */
+}
+
+/* Define other theme classes as needed */
+.theme-dark .tab-button {
+  color: white;
+  /* Text color for dark theme tabs */
+  background-color: #ffffff;
+  outline-color: #FFF;
+  /* Background color for dark theme tabs */
+}
+
+.custom-button {
+  display: block;
+  /* Add this property to make the buttons clickable */
+  margin: 10px 8px;
+  margin-bottom: 40px;
+  margin-top:150px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #FFF;
+  pointer-events: all;
+  z-index: 100;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Semi-transparent background */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+  background: linear-gradient(to right, #333366, #262533);
+
+  font-weight: bold;
+  /* Makes the text bold */
+}
+
+.custom-button.active {
+  background-color: #FFF;
+  color: #ffffff;
+  background: linear-gradient(to right, #7b2ff7, #f107a3);
+  border-color: rgba(255, 255, 255, 0.75);
+  /* Brighter border on hover and for active button */
+}
+
+/* Other styles ... */
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  /* Keeps items aligned vertically in the center */
+  justify-content: flex-start;
+  /* Aligns items to the start of the container (left side) */
+  margin: 5px 0;
+  /* Vertical margin for each skill item */
+}
+
+.skill-name {
+  /* Assuming you want the skill name to be of a fixed width to align the text uniformly */
+  width: 370px;
+  /* Adjust this width as needed */
+  text-align: right;
+  /* Keeps the text right-aligned */
+  margin-right: 10px;
+  /* Space between the skill name and the progress bar */
+}
+
+.progress-container {
+  background-color: #ddd;
+  border-radius: 10px;
+  height: 13px;
+  width: 50%;
+  /* Adjust this width to control the progress bar's length */
+  /* Removed margin-left: auto to bring the progress bar closer to the skill name */
+}
+
+.progress-bar {
+  background: linear-gradient(to right, #7b2ff7, #f107a3);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.custom-image {
+  width: 55px; /* Adjust to your desired width in pixels */
+  height: 55px; /* Adjust to your desired height in pixels */
+}
